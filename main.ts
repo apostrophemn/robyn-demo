@@ -3,6 +3,11 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
         mySprite.vy = -185
     }
 })
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (mySprite.vy == 0) {
+        mySprite.vy = -185
+    }
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile`, function (sprite, location) {
     game.over(false)
 })
